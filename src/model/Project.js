@@ -24,13 +24,13 @@ class Project {
      * Constructs a new <code>Project</code>.
      * @alias module:model/Project
      * @param pTitle {String} 
-     * @param pImage {module:model/ProjectPImage} 
      * @param pDescription {String} 
+     * @param pImage {module:model/ProjectPImage} 
      * @param pEnd {Date} 
      */
-    constructor(pTitle, pImage, pDescription, pEnd) { 
+    constructor(pTitle, pDescription, pImage, pEnd) { 
         
-        Project.initialize(this, pTitle, pImage, pDescription, pEnd);
+        Project.initialize(this, pTitle, pDescription, pImage, pEnd);
     }
 
     /**
@@ -38,10 +38,10 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, pTitle, pImage, pDescription, pEnd) { 
+    static initialize(obj, pTitle, pDescription, pImage, pEnd) { 
         obj['pTitle'] = pTitle;
-        obj['pImage'] = pImage;
         obj['pDescription'] = pDescription;
+        obj['pImage'] = pImage;
         obj['pEnd'] = pEnd;
     }
 
@@ -62,11 +62,11 @@ class Project {
             if (data.hasOwnProperty('pTitle')) {
                 obj['pTitle'] = ApiClient.convertToType(data['pTitle'], 'String');
             }
-            if (data.hasOwnProperty('pImage')) {
-                obj['pImage'] = ProjectPImage.constructFromObject(data['pImage']);
-            }
             if (data.hasOwnProperty('pDescription')) {
                 obj['pDescription'] = ApiClient.convertToType(data['pDescription'], 'String');
+            }
+            if (data.hasOwnProperty('pImage')) {
+                obj['pImage'] = ProjectPImage.constructFromObject(data['pImage']);
             }
             if (data.hasOwnProperty('pEnd')) {
                 obj['pEnd'] = ApiClient.convertToType(data['pEnd'], 'Date');
@@ -89,14 +89,14 @@ Project.prototype['_id'] = undefined;
 Project.prototype['pTitle'] = undefined;
 
 /**
- * @member {module:model/ProjectPImage} pImage
- */
-Project.prototype['pImage'] = undefined;
-
-/**
  * @member {String} pDescription
  */
 Project.prototype['pDescription'] = undefined;
+
+/**
+ * @member {module:model/ProjectPImage} pImage
+ */
+Project.prototype['pImage'] = undefined;
 
 /**
  * @member {Date} pEnd
