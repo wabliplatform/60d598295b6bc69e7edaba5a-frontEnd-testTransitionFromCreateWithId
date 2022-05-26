@@ -6,8 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **pTitle** | **String** |  | 
-**pDescription** | **String** |  | 
 **pImage** | [**ProjectPImage**](ProjectPImage.md) |  | 
+**pStart** | **String** |  | 
 **pEnd** | **Date** |  | 
+**pDescription** | **String** |  | 
 
 

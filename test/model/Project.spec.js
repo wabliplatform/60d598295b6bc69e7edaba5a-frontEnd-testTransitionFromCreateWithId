@@ -66,20 +66,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property pDescription (base name: "pDescription")', function() {
-      // uncomment below and update the code to test the property pDescription
-      //var instance = new TempApi.Project();
-      //expect(instance).to.be();
-    });
-
     it('should have the property pImage (base name: "pImage")', function() {
       // uncomment below and update the code to test the property pImage
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
+    it('should have the property pStart (base name: "pStart")', function() {
+      // uncomment below and update the code to test the property pStart
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
     it('should have the property pEnd (base name: "pEnd")', function() {
       // uncomment below and update the code to test the property pEnd
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pDescription (base name: "pDescription")', function() {
+      // uncomment below and update the code to test the property pDescription
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
