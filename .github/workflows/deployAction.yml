@@ -14,7 +14,7 @@ jobs:
           password: ${{ secrets.WABLI_SERVER_SSH_PASSWORD }}
           port: ${{ secrets.WABLI_SERVER_SSH_PORT }}
           script: >-
-            ./wabli-applications/deploy.sh -b main -d miniature-parakeet -r
+            ./wabli-applications/deploy.sh -b main -d local-host -r
             https://github.com/wabliplatform/60d598295b6bc69e7edaba5a-frontEnd-testTransitionFromCreateWithId.git
             -f 60d598295b6bc69e7edaba5a-frontEnd-testTransitionFromCreateWithId
-            -p 3202
+            -p 8080
