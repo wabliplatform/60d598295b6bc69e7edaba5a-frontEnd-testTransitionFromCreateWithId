@@ -73,20 +73,4 @@ document.getElementById('ihrlh').onclick = (event) => {
         data: document.querySelector("[annotationname = 'pImage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'pImage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'pImage']").src,
         name: document.querySelector("[annotationname = 'pImage']").getAttribute("name")
       };
-      project['pDescription'] = document.querySelector("[annotationname = 'pDescription']").value;apiProjectApi.createproject( project, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); { 
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document
-            .getElementById(key)
-            .contains(document.getElementById("ihrlh")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/Page3/' + transitionId;}}});};window.onload = () => {};
+      project['pDescription'] = document.querySelector("[annotationname = 'pDescription']").value;apiProjectApi.createproject( project, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {  location.href= '/Page3/'+response.body.query._id+'' ;}}});};window.onload = () => {};
