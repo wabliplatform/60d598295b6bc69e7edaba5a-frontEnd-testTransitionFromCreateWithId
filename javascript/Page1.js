@@ -67,17 +67,13 @@ document.getElementById('formFile').addEventListener("change", async(e) => {
           QUALITY
         );
       };});
-$(
-      function () { $("#datepicker").datepicker({format: 'dd-mm-yyyy'}); }
-    );$(
-      function () { $("#datepicker-2").datepicker({format: 'dd-mm-yyyy'}); }
-    );document.getElementById('ihrlh').onclick = (event) => {
+document.getElementById('ihrlh').onclick = (event) => {
     event.preventDefault();
     project['pTitle'] = document.querySelector("[annotationname = 'pTitle']").value;project['pImage'] = {
         data: document.querySelector("[annotationname = 'pImage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'pImage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'pImage']").src,
         name: document.querySelector("[annotationname = 'pImage']").getAttribute("name")
       };
-      project['pStart'] = document.querySelector("[annotationname = 'pStart']").value;project['pEnd'] = document.querySelector("[annotationname = 'pEnd']").value;project['pDescription'] = document.querySelector("[annotationname = 'pDescription']").value;apiProjectApi.createproject( project, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); { 
+      project['pDescription'] = document.querySelector("[annotationname = 'pDescription']").value;apiProjectApi.createproject( project, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); { 
       let transitionId = window.location.href.split('/').at(-1);
       let parentId = "";
       const storedData = window.localStorage.getItem("data");
